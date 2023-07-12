@@ -28,7 +28,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('Dashboards')->group(function () {
-    // Route::redirect('/', '/Dashboards/Patient');
+    Route::redirect('/dashboards', '/Dashboards/Patient');
     Route::view('Patient', 'dashboards/patient');
     Route::view('Doctor', 'dashboards/doctor');
 });
